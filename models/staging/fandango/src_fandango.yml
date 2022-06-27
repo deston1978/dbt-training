@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: fandango
+    database: Raw
+    schema: fandango
+    tables: 
+      - name: fandango_scrape
+      - name: fandango_score_comparison
