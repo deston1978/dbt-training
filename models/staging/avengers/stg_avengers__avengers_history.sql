@@ -1,3 +1,4 @@
+
 with avengers_history as ( 
 
     select * from {{ source('avengers', 'avengers_history') }}
@@ -8,7 +9,7 @@ final as (
 select
     md5(url) as avenger_id,
     url as marvel_wikia_url,
-    nvl(name_alias, 'N/A') as avenger_name,
+    nvl(name_alias, '{{ var("default_string") }}') as avenger_name,    
     appearances as num_of_appearances,
     current_ = 'YES' as is_current,
     initcap(gender) as gender,
