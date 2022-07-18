@@ -23,6 +23,9 @@ clean-targets:         # directories to be removed by `dbt clean`
 vars:
   default_string: 'N/A'
 
+seeds:
+  +schema: public
+
 models:
   dbt_training:
     staging:
