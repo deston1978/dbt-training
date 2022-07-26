@@ -1,10 +1,9 @@
-name: CI
+name: scheduled_cron_runs
 
 on:
-  pull_request:
-    branches: [ main ]
-
-  workflow_dispatch:
+  schedule:
+  # runs "at minute 0 of every hour"
+  - cron: '0 * * * *'
 
 jobs:
   build:
